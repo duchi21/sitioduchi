@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Empresa favorita </title>
+  <title>Mi Empresa Favorita</title>
 
   <style>
     /* ----- ESTILOS GENERALES ----- */
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(120deg, #0f172a, #1e293b, #0f172a);
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0072ff, #00c6ff, #0072ff);
       background-size: 300% 300%;
-      animation: gradientMove 12s ease infinite;
+      animation: gradientMove 10s ease infinite;
       color: white;
     }
 
@@ -29,76 +29,60 @@
       align-items: center;
       position: sticky;
       top: 0;
-      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(8px);
     }
 
     nav a {
-      color: #e2e8f0;
+      color: #f8fafc;
       margin: 0 15px;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
       transition: 0.3s;
     }
 
     nav a:hover {
-      color: #38bdf8;
+      color: #ffe066;
     }
 
-    /* ----- HERO SECTION ----- */
+    /* ----- HERO ----- */
     .hero {
-      height: 85vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      padding: 60px 30px;
       text-align: center;
-      padding: 0 20px;
     }
 
     .hero h1 {
-      font-size: 3.5rem;
+      font-size: 3rem;
       margin-bottom: 10px;
-      animation: fadeIn 1.2s ease forwards;
-      opacity: 0;
     }
 
     .hero p {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       max-width: 600px;
-      animation: fadeIn 1.8s ease forwards;
-      opacity: 0;
-    }
-
-    @keyframes fadeIn {
-      to { opacity: 1; }
+      margin: 0 auto;
     }
 
     .btn {
       margin-top: 30px;
       padding: 12px 28px;
-      background: #38bdf8;
-      color: #0f172a;
+      background: #ffe066;
+      color: #003049;
       border-radius: 25px;
       font-size: 1.1rem;
       border: none;
       cursor: pointer;
-      transition: 0.3s;
       font-weight: bold;
+      transition: 0.3s;
     }
 
     .btn:hover {
-      background: #7dd3fc;
+      background: #ffcf33;
     }
 
     /* ----- SERVICIOS ----- */
     .servicios {
       padding: 80px 40px;
       text-align: center;
-    }
-
-    .servicios h2 {
-      font-size: 2.5rem;
-      margin-bottom: 40px;
     }
 
     .cards {
@@ -108,15 +92,23 @@
     }
 
     .card {
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.15);
       padding: 25px;
       border-radius: 20px;
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
       transition: 0.3s;
+      color: #073b4c;
+      text-align: left;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
     }
 
     .card:hover {
-      background: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.25);
       transform: translateY(-5px);
     }
 
@@ -126,15 +118,10 @@
       text-align: center;
     }
 
-    .contacto h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
     footer {
       text-align: center;
       padding: 25px;
-      background: rgba(0,0,0,0.2);
+      background: rgba(0,0,0,0.25);
       margin-top: 40px;
     }
   </style>
@@ -144,55 +131,69 @@
 
   <!-- NAV -->
   <header>
-    <h2 style="margin:0;">BIENEVENIDOS A TU EMPRESA </h2>
+    <h2 style="margin:0;">BIENVENIDOS A TU EMPRESA</h2>
     <nav>
       <a href="#inicio">Inicio</a>
-      <a href="#servicios">Estadisticas</a>
+      <a href="#servicios">Servicios</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
- <!-- HERO -->
-<section id="inicio" class="hero" style="text-align: center; padding: 40px;">
-  
-  <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    
+    <!-- Aquí puede agregar una imagen de portada -->
+    <!-- EJEMPLO DE IMAGEN HERO -->
+    <img src="Captura_082207.png" style="width: 70%; border-radius: 15px; margin-bottom: 25px;">
+
     <iframe width="560" height="315"
       src="https://www.youtube.com/embed/xrQ1YH0PnrM?si=xJMvNnzV2cpxW0AG"
-      title="YouTube video player"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen>
     </iframe>
-  </div>
 
-  <h1>Estamos creciendo en el centro del país.</h1>
+    <h1>Estamos creciendo en el centro del país</h1>
+    <p>Te ayudamos creando proyectos en R, Python y otros lenguajes con tecnología moderna.</p>
 
-  <p>Te ayudamos creando proyectos de todo tipo que manejen R o Python junto a otros lenguajes.</p>
-
-  <button class="btn" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
-    Comenzar
-  </button>
-
-</section>
+    <button class="btn">Comenzar</button>
+  </section>
 
   <!-- SERVICIOS -->
   <section id="servicios" class="servicios">
     <h2>Servicios</h2>
 
     <div class="cards">
+
       <div class="card">
+        <img src="imagen1.png" alt="Diseño Web">
         <h3>Diseño Web</h3>
         <p>Sitios modernos, rápidos y elegantes.</p>
       </div>
+
       <div class="card">
+        <img src="imagen2.png" alt="Dashboards">
         <h3>Dashboards</h3>
         <p>Visualizaciones con R Shiny, Python o Power BI.</p>
+
+        <h4>Aplicación Shiny</h4>
+        <p>Interactúa con mi app publicada en shinyapps.io:</p>
+
+        <iframe
+          src="https://fqtgfb-stalin-duchi.shinyapps.io/appduchi/"
+          width="100%"
+          height="350px"
+          frameborder="0"
+          style="border-radius: 10px;">
+        </iframe>
       </div>
+
       <div class="card">
+        <img src="imagen3.png" alt="Automatización">
         <h3>Automatización</h3>
         <p>Scripts inteligentes para mejorar procesos.</p>
       </div>
+
     </div>
   </section>
 
@@ -208,5 +209,3 @@
 
 </body>
 </html>
-
-
